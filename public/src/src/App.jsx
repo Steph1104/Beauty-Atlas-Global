@@ -1114,7 +1114,7 @@ function AtlasHeader({ onLogoClick }) {
   return (
     <div style={{borderBottom:"1px solid rgba(196,168,130,0.2)",padding:"16px 32px",display:"flex",alignItems:"center",justifyContent:"space-between",background:"#faf7f4",position:"sticky",top:0,zIndex:100}}>
       <button onClick={onLogoClick} style={{background:"none",border:"none",cursor:"pointer",display:"flex",alignItems:"center",gap:12}}>
-        <span style={{fontFamily:"'Playfair Display',serif",fontSize:20,fontWeight:400,color:"#1C1008",letterSpacing:6,textTransform:"uppercase"}}>Beauty</span>
+        <span style={{fontFamily:"'Playfair Display',serif",fontSize:20,fontWeight:400,color:"#521F15",letterSpacing:6,textTransform:"uppercase"}}>Beauty</span>
         <span style={{fontFamily:"'Playfair Display',serif",fontStyle:"italic",fontSize:20,fontWeight:400,color:"#c4a882",letterSpacing:4}}>Atlas</span>
       </button>
       <div style={{fontSize:8,letterSpacing:5,color:"rgba(196,168,130,0.6)",textTransform:"uppercase",fontFamily:"'Cormorant Garamond',serif"}}>A Global Beauty Compendium</div>
@@ -1154,7 +1154,7 @@ function ProductCard({ tab, data, countryName, flag }) {
   return (
     <div style={{padding:"24px 0"}}>
       <div style={{marginBottom:6,fontSize:9,letterSpacing:4,color:"#8b7355",textTransform:"uppercase",fontFamily:"'Cormorant Garamond',serif"}}>{flag} {countryName}</div>
-      <h3 style={{fontFamily:"'Playfair Display',serif",fontSize:20,fontWeight:400,color:"#1C1008",marginBottom:4}}>{d.product}</h3>
+      <h3 style={{fontFamily:"'Playfair Display',serif",fontSize:20,fontWeight:400,color:"#521F15",marginBottom:4}}>{d.product}</h3>
       <div style={{fontSize:10,letterSpacing:3,color:"#c4a882",textTransform:"uppercase",fontFamily:"'Cormorant Garamond',serif",marginBottom:12}}>{d.heroIngredient}</div>
       <p style={{fontFamily:"'Cormorant Garamond',serif",fontStyle:"italic",fontSize:15,color:"#8b7355",marginBottom:14,lineHeight:1.6}}>"{d.editorNote}"</p>
       <p style={{fontFamily:"'Cormorant Garamond',serif",fontSize:15,color:"#5a4a38",lineHeight:1.75,marginBottom:16}}>{d.ritual}</p>
@@ -1187,14 +1187,14 @@ function ExploreScreen({ onBack }) {
             <div style={{display:"flex",alignItems:"flex-start",gap:16,marginBottom:28}}>
               <span style={{fontSize:52}}>{selectedCountry.flag}</span>
               <div>
-                <h1 style={{fontFamily:"'Playfair Display',serif",fontSize:"clamp(28px,5vw,44px)",fontWeight:400,color:"#1C1008",letterSpacing:4,textTransform:"uppercase"}}>{selectedCountry.name}</h1>
+                <h1 style={{fontFamily:"'Playfair Display',serif",fontSize:"clamp(28px,5vw,44px)",fontWeight:400,color:"#521F15",letterSpacing:4,textTransform:"uppercase"}}>{selectedCountry.name}</h1>
                 <p style={{fontFamily:"'Cormorant Garamond',serif",fontStyle:"italic",fontSize:16,color:"#8b7355",marginTop:4,lineHeight:1.6}}>{selectedCountry.philosophy}</p>
               </div>
             </div>
             <div style={{display:"flex",gap:0,borderBottom:"1px solid rgba(196,168,130,0.25)",marginBottom:28,overflowX:"auto"}}>
               {beautyTabs.map(t => (
                 <button key={t.id} className="tab-btn" onClick={() => setActiveTab(t.id)}
-                  style={{color:activeTab===t.id?"#1C1008":"#8b7355",borderBottom:activeTab===t.id?"2px solid #c4a882":"2px solid transparent",fontSize:11,letterSpacing:3,whiteSpace:"nowrap"}}>
+                  style={{color:activeTab===t.id?"#521F15":"#8b7355",borderBottom:activeTab===t.id?"2px solid #c4a882":"2px solid transparent",fontSize:11,letterSpacing:3,whiteSpace:"nowrap"}}>
                   {t.icon} {t.label}
                 </button>
               ))}
@@ -1204,7 +1204,7 @@ function ExploreScreen({ onBack }) {
         ) : (
           <>
             <div style={{marginBottom:32,textAlign:"center"}}>
-              <h1 style={{fontFamily:"'Playfair Display',serif",fontSize:"clamp(24px,4vw,38px)",fontWeight:400,color:"#1C1008",letterSpacing:8,textTransform:"uppercase",marginBottom:8}}>Explore the Atlas</h1>
+              <h1 style={{fontFamily:"'Playfair Display',serif",fontSize:"clamp(24px,4vw,38px)",fontWeight:400,color:"#521F15",letterSpacing:8,textTransform:"uppercase",marginBottom:8}}>Explore the Atlas</h1>
               <p style={{fontFamily:"'Cormorant Garamond',serif",fontStyle:"italic",fontSize:16,color:"#8b7355"}}>Twenty-one countries, four beauty categories, centuries of ritual</p>
             </div>
             <div style={{display:"flex",gap:8,justifyContent:"center",flexWrap:"wrap",marginBottom:32}}>
@@ -1221,7 +1221,7 @@ function ExploreScreen({ onBack }) {
                   <div style={{display:"flex",alignItems:"center",gap:12,marginBottom:14}}>
                     <span style={{fontSize:32}}>{country.flag}</span>
                     <div>
-                      <div style={{fontFamily:"'Playfair Display',serif",fontSize:18,fontWeight:400,color:"#1C1008",letterSpacing:2}}>{country.name}</div>
+                      <div style={{fontFamily:"'Playfair Display',serif",fontSize:18,fontWeight:400,color:"#521F15",letterSpacing:2}}>{country.name}</div>
                       <div style={{fontSize:9,letterSpacing:3,color:"#c4a882",textTransform:"uppercase",fontFamily:"'Cormorant Garamond',serif"}}>{country.region}</div>
                     </div>
                   </div>
@@ -1257,7 +1257,7 @@ function SkinConcernScreen({ onBack }) {
             <button className="back-btn" onClick={() => setSelected(null)} style={{marginBottom:28}}>← All Concerns</button>
             <div style={{marginBottom:32}}>
               <div style={{fontSize:36,marginBottom:12}}>{selected.icon}</div>
-              <h1 style={{fontFamily:"'Playfair Display',serif",fontSize:"clamp(24px,4vw,36px)",fontWeight:400,color:"#1C1008",letterSpacing:4,textTransform:"uppercase",marginBottom:8}}>{data.label}</h1>
+              <h1 style={{fontFamily:"'Playfair Display',serif",fontSize:"clamp(24px,4vw,36px)",fontWeight:400,color:"#521F15",letterSpacing:4,textTransform:"uppercase",marginBottom:8}}>{data.label}</h1>
               <p style={{fontFamily:"'Cormorant Garamond',serif",fontStyle:"italic",fontSize:16,color:"#8b7355",lineHeight:1.6,maxWidth:600}}>{data.intro}</p>
             </div>
             <div style={{display:"flex",flexDirection:"column",gap:24}}>
@@ -1266,12 +1266,12 @@ function SkinConcernScreen({ onBack }) {
                   <div style={{display:"flex",alignItems:"center",gap:10,marginBottom:16}}>
                     <span style={{fontSize:28}}>{c.flag}</span>
                     <div>
-                      <div style={{fontFamily:"'Playfair Display',serif",fontSize:16,color:"#1C1008",letterSpacing:2}}>{c.country}</div>
+                      <div style={{fontFamily:"'Playfair Display',serif",fontSize:16,color:"#521F15",letterSpacing:2}}>{c.country}</div>
                       <div style={{fontSize:9,letterSpacing:3,color:"#c4a882",textTransform:"uppercase",fontFamily:"'Cormorant Garamond',serif"}}>{c.heroIngredient}</div>
                     </div>
                     <div style={{marginLeft:"auto",fontFamily:"'Playfair Display',serif",fontStyle:"italic",fontSize:22,color:"rgba(196,168,130,0.4)"}}>#{i+1}</div>
                   </div>
-                  <h3 style={{fontFamily:"'Playfair Display',serif",fontSize:18,fontWeight:400,color:"#1C1008",marginBottom:12}}>{c.product}</h3>
+                  <h3 style={{fontFamily:"'Playfair Display',serif",fontSize:18,fontWeight:400,color:"#521F15",marginBottom:12}}>{c.product}</h3>
                   <p style={{fontFamily:"'Cormorant Garamond',serif",fontSize:15,color:"#5a4a38",lineHeight:1.75,marginBottom:16}}>{c.ritual}</p>
                   <ShopLink href={c.shopLink} />
                 </div>
@@ -1281,14 +1281,14 @@ function SkinConcernScreen({ onBack }) {
         ) : (
           <>
             <div style={{textAlign:"center",marginBottom:36}}>
-              <h1 style={{fontFamily:"'Playfair Display',serif",fontSize:"clamp(24px,4vw,38px)",fontWeight:400,color:"#1C1008",letterSpacing:8,textTransform:"uppercase",marginBottom:8}}>My Skin Concern</h1>
+              <h1 style={{fontFamily:"'Playfair Display',serif",fontSize:"clamp(24px,4vw,38px)",fontWeight:400,color:"#521F15",letterSpacing:8,textTransform:"uppercase",marginBottom:8}}>My Skin Concern</h1>
               <p style={{fontFamily:"'Cormorant Garamond',serif",fontStyle:"italic",fontSize:16,color:"#8b7355"}}>The world's most effective rituals, curated for your specific needs</p>
             </div>
             <div style={{display:"grid",gridTemplateColumns:"repeat(auto-fill,minmax(240px,1fr))",gap:16}}>
               {skinConcerns.map(c => (
                 <div key={c.id} className="concern-card" onClick={() => setSelected(c)}>
                   <div style={{fontSize:28,marginBottom:10}}>{c.icon}</div>
-                  <div style={{fontFamily:"'Playfair Display',serif",fontSize:17,fontWeight:400,color:"#1C1008",marginBottom:6,letterSpacing:1}}>{c.label}</div>
+                  <div style={{fontFamily:"'Playfair Display',serif",fontSize:17,fontWeight:400,color:"#521F15",marginBottom:6,letterSpacing:1}}>{c.label}</div>
                   <div style={{fontFamily:"'Cormorant Garamond',serif",fontStyle:"italic",fontSize:14,color:"#8b7355",lineHeight:1.5}}>{c.description}</div>
                 </div>
               ))}
@@ -1303,7 +1303,7 @@ function SkinConcernScreen({ onBack }) {
 function LandingScreen({ onEnter }) {
   const floatingFlags = ["🇰🇷","🇫🇷","🇯🇵","🇧🇷","🇮🇳","🇲🇦","🇺🇸","🇸🇪","🇳🇬","🇦🇺","🇪🇬","🇮🇹","🇹🇭","🇨🇴","🇪🇹","🇬🇷","🇨🇳","🇬🇭","🇦🇷"];
   return (
-    <div style={{minHeight:"100vh",background:"#1C1008",display:"flex",alignItems:"center",justifyContent:"center",position:"relative",overflow:"hidden"}}>
+    <div style={{minHeight:"100vh",background:"#521F15",display:"flex",alignItems:"center",justifyContent:"center",position:"relative",overflow:"hidden"}}>
       <style>{css}</style>
       <style>{`
         @keyframes floatFlag{0%,100%{transform:translateY(0) rotate(0deg)}50%{transform:translateY(-12px) rotate(2deg)}}
@@ -1362,7 +1362,7 @@ function PrivacyPolicy({ onBack }) {
       <AtlasHeader onLogoClick={onBack} />
       <div style={{maxWidth:720,margin:"0 auto",padding:"48px 24px"}}>
         <button className="back-btn" onClick={onBack} style={{marginBottom:32}}>← Back</button>
-        <h1 style={{fontFamily:"'Playfair Display',serif",fontSize:"clamp(28px,5vw,42px)",fontWeight:400,color:"#1C1008",letterSpacing:4,textTransform:"uppercase",marginBottom:8}}>Privacy Policy</h1>
+        <h1 style={{fontFamily:"'Playfair Display',serif",fontSize:"clamp(28px,5vw,42px)",fontWeight:400,color:"#521F15",letterSpacing:4,textTransform:"uppercase",marginBottom:8}}>Privacy Policy</h1>
         <p style={{fontFamily:"'Cormorant Garamond',serif",fontStyle:"italic",fontSize:15,color:"#8b7355",marginBottom:40}}>Last updated: {new Date().toLocaleDateString('en-US', {year:'numeric',month:'long',day:'numeric'})}</p>
 
         {[
@@ -1376,7 +1376,7 @@ function PrivacyPolicy({ onBack }) {
           ["Contact", "If you have any questions about this Privacy Policy, please contact us at hello@beautyatlas.com."],
         ].map(([title, body]) => (
           <div key={title} style={{marginBottom:32}}>
-            <h2 style={{fontFamily:"'Playfair Display',serif",fontSize:18,fontWeight:400,color:"#1C1008",letterSpacing:2,marginBottom:10}}>{title}</h2>
+            <h2 style={{fontFamily:"'Playfair Display',serif",fontSize:18,fontWeight:400,color:"#521F15",letterSpacing:2,marginBottom:10}}>{title}</h2>
             <p style={{fontFamily:"'Cormorant Garamond',serif",fontSize:16,color:"#5a4a38",lineHeight:1.8}}>{body}</p>
           </div>
         ))}
@@ -1392,7 +1392,7 @@ function TermsOfUse({ onBack }) {
       <AtlasHeader onLogoClick={onBack} />
       <div style={{maxWidth:720,margin:"0 auto",padding:"48px 24px"}}>
         <button className="back-btn" onClick={onBack} style={{marginBottom:32}}>← Back</button>
-        <h1 style={{fontFamily:"'Playfair Display',serif",fontSize:"clamp(28px,5vw,42px)",fontWeight:400,color:"#1C1008",letterSpacing:4,textTransform:"uppercase",marginBottom:8}}>Terms of Use</h1>
+        <h1 style={{fontFamily:"'Playfair Display',serif",fontSize:"clamp(28px,5vw,42px)",fontWeight:400,color:"#521F15",letterSpacing:4,textTransform:"uppercase",marginBottom:8}}>Terms of Use</h1>
         <p style={{fontFamily:"'Cormorant Garamond',serif",fontStyle:"italic",fontSize:15,color:"#8b7355",marginBottom:40}}>Last updated: {new Date().toLocaleDateString('en-US', {year:'numeric',month:'long',day:'numeric'})}</p>
 
         {[
@@ -1407,7 +1407,7 @@ function TermsOfUse({ onBack }) {
           ["Contact", "For any questions regarding these Terms of Use, please contact us at hello@beautyatlas.com."],
         ].map(([title, body]) => (
           <div key={title} style={{marginBottom:32}}>
-            <h2 style={{fontFamily:"'Playfair Display',serif",fontSize:18,fontWeight:400,color:"#1C1008",letterSpacing:2,marginBottom:10}}>{title}</h2>
+            <h2 style={{fontFamily:"'Playfair Display',serif",fontSize:18,fontWeight:400,color:"#521F15",letterSpacing:2,marginBottom:10}}>{title}</h2>
             <p style={{fontFamily:"'Cormorant Garamond',serif",fontSize:16,color:"#5a4a38",lineHeight:1.8}}>{body}</p>
           </div>
         ))}
