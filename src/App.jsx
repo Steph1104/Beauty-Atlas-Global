@@ -1095,10 +1095,10 @@ const css = `
   .region-btn{background:none;border:none;cursor:pointer;font-family:'Cormorant Garamond',serif;transition:all 0.2s;padding:6px 14px;font-size:11px;letter-spacing:2px;text-transform:uppercase}
   .region-btn:hover{opacity:0.7}
   .country-card{background:#fff;border:1px solid rgba(196,168,130,0.2);transition:all 0.3s;cursor:pointer}
-  .country-card:hover{border-color:#c4a882;box-shadow:0 8px 40px rgba(196,168,130,0.15);transform:translateY(-2px)}
+  .country-card:hover{border-color:#FAF7F4;box-shadow:0 8px 40px rgba(196,168,130,0.15);transform:translateY(-2px)}
   .concern-card{background:#fff;border:1px solid rgba(196,168,130,0.2);cursor:pointer;transition:all 0.3s;padding:20px}
-  .concern-card:hover{border-color:#c4a882;box-shadow:0 4px 20px rgba(196,168,130,0.15)}
-  .shop-link{color:#c4a882;font-family:'Cormorant Garamond',serif;font-size:11px;letter-spacing:3px;text-transform:uppercase;text-decoration:none;transition:opacity 0.2s;cursor:pointer}
+  .concern-card:hover{border-color:#FAF7F4;box-shadow:0 4px 20px rgba(196,168,130,0.15)}
+  .shop-link{color:#FAF7F4;font-family:'Cormorant Garamond',serif;font-size:11px;letter-spacing:3px;text-transform:uppercase;text-decoration:none;transition:opacity 0.2s;cursor:pointer}
   .shop-link:hover{opacity:0.6}
   .deep-toggle{background:none;border:none;cursor:pointer;width:100%;text-align:left;padding:10px 0;font-family:'Cormorant Garamond',serif;transition:all 0.2s}
   .deep-toggle:hover{opacity:0.7}
@@ -1115,7 +1115,7 @@ function AtlasHeader({ onLogoClick }) {
     <div style={{borderBottom:"1px solid rgba(196,168,130,0.2)",padding:"16px 32px",display:"flex",alignItems:"center",justifyContent:"space-between",background:"#faf7f4",position:"sticky",top:0,zIndex:100}}>
       <button onClick={onLogoClick} style={{background:"none",border:"none",cursor:"pointer",display:"flex",alignItems:"center",gap:12}}>
         <span style={{fontFamily:"'Playfair Display',serif",fontSize:20,fontWeight:400,color:"#521F15",letterSpacing:6,textTransform:"uppercase"}}>Beauty</span>
-        <span style={{fontFamily:"'Playfair Display',serif",fontStyle:"italic",fontSize:20,fontWeight:400,color:"#c4a882",letterSpacing:4}}>Atlas</span>
+        <span style={{fontFamily:"'Playfair Display',serif",fontStyle:"italic",fontSize:20,fontWeight:400,color:"#FAF7F4",letterSpacing:4}}>Atlas</span>
       </button>
       <div style={{fontSize:8,letterSpacing:5,color:"rgba(196,168,130,0.6)",textTransform:"uppercase",fontFamily:"'Cormorant Garamond',serif"}}>A Global Beauty Compendium</div>
     </div>
@@ -1129,7 +1129,7 @@ function DeepDiveSection({ title, content, icon }) {
       <button className="deep-toggle" onClick={() => setOpen(!open)}>
         <div style={{display:"flex",justifyContent:"space-between",alignItems:"center"}}>
           <span style={{fontSize:9,letterSpacing:4,textTransform:"uppercase",color:"#8b7355"}}>{icon} {title}</span>
-          <span style={{fontSize:14,color:"#c4a882",transition:"transform 0.3s",display:"inline-block",transform:open?"rotate(90deg)":"rotate(0deg)"}}>›</span>
+          <span style={{fontSize:14,color:"#FAF7F4",transition:"transform 0.3s",display:"inline-block",transform:open?"rotate(90deg)":"rotate(0deg)"}}>›</span>
         </div>
       </button>
       {open && (
@@ -1155,7 +1155,7 @@ function ProductCard({ tab, data, countryName, flag }) {
     <div style={{padding:"24px 0"}}>
       <div style={{marginBottom:6,fontSize:9,letterSpacing:4,color:"#8b7355",textTransform:"uppercase",fontFamily:"'Cormorant Garamond',serif"}}>{flag} {countryName}</div>
       <h3 style={{fontFamily:"'Playfair Display',serif",fontSize:20,fontWeight:400,color:"#521F15",marginBottom:4}}>{d.product}</h3>
-      <div style={{fontSize:10,letterSpacing:3,color:"#c4a882",textTransform:"uppercase",fontFamily:"'Cormorant Garamond',serif",marginBottom:12}}>{d.heroIngredient}</div>
+      <div style={{fontSize:10,letterSpacing:3,color:"#FAF7F4",textTransform:"uppercase",fontFamily:"'Cormorant Garamond',serif",marginBottom:12}}>{d.heroIngredient}</div>
       <p style={{fontFamily:"'Cormorant Garamond',serif",fontStyle:"italic",fontSize:15,color:"#8b7355",marginBottom:14,lineHeight:1.6}}>"{d.editorNote}"</p>
       <p style={{fontFamily:"'Cormorant Garamond',serif",fontSize:15,color:"#5a4a38",lineHeight:1.75,marginBottom:16}}>{d.ritual}</p>
       <DeepDiveSection icon="📜" title="Origin Story" content={d.originStory} />
@@ -1194,7 +1194,7 @@ function ExploreScreen({ onBack }) {
             <div style={{display:"flex",gap:0,borderBottom:"1px solid rgba(196,168,130,0.25)",marginBottom:28,overflowX:"auto"}}>
               {beautyTabs.map(t => (
                 <button key={t.id} className="tab-btn" onClick={() => setActiveTab(t.id)}
-                  style={{color:activeTab===t.id?"#521F15":"#8b7355",borderBottom:activeTab===t.id?"2px solid #c4a882":"2px solid transparent",fontSize:11,letterSpacing:3,whiteSpace:"nowrap"}}>
+                  style={{color:activeTab===t.id?"#521F15":"#8b7355",borderBottom:activeTab===t.id?"2px solid #FAF7F4":"2px solid transparent",fontSize:11,letterSpacing:3,whiteSpace:"nowrap"}}>
                   {t.icon} {t.label}
                 </button>
               ))}
@@ -1210,7 +1210,7 @@ function ExploreScreen({ onBack }) {
             <div style={{display:"flex",gap:8,justifyContent:"center",flexWrap:"wrap",marginBottom:32}}>
               {regions.map(r => (
                 <button key={r} className="region-btn" onClick={() => setActiveRegion(r)}
-                  style={{color:activeRegion===r?"#c4a882":"#8b7355",borderBottom:activeRegion===r?"1px solid #c4a882":"1px solid transparent"}}>
+                  style={{color:activeRegion===r?"#FAF7F4":"#8b7355",borderBottom:activeRegion===r?"1px solid #FAF7F4":"1px solid transparent"}}>
                   {r}
                 </button>
               ))}
@@ -1222,7 +1222,7 @@ function ExploreScreen({ onBack }) {
                     <span style={{fontSize:32}}>{country.flag}</span>
                     <div>
                       <div style={{fontFamily:"'Playfair Display',serif",fontSize:18,fontWeight:400,color:"#521F15",letterSpacing:2}}>{country.name}</div>
-                      <div style={{fontSize:9,letterSpacing:3,color:"#c4a882",textTransform:"uppercase",fontFamily:"'Cormorant Garamond',serif"}}>{country.region}</div>
+                      <div style={{fontSize:9,letterSpacing:3,color:"#FAF7F4",textTransform:"uppercase",fontFamily:"'Cormorant Garamond',serif"}}>{country.region}</div>
                     </div>
                   </div>
                   <p style={{fontFamily:"'Cormorant Garamond',serif",fontStyle:"italic",fontSize:14,color:"#8b7355",lineHeight:1.6,marginBottom:16}}>{country.philosophy}</p>
@@ -1267,7 +1267,7 @@ function SkinConcernScreen({ onBack }) {
                     <span style={{fontSize:28}}>{c.flag}</span>
                     <div>
                       <div style={{fontFamily:"'Playfair Display',serif",fontSize:16,color:"#521F15",letterSpacing:2}}>{c.country}</div>
-                      <div style={{fontSize:9,letterSpacing:3,color:"#c4a882",textTransform:"uppercase",fontFamily:"'Cormorant Garamond',serif"}}>{c.heroIngredient}</div>
+                      <div style={{fontSize:9,letterSpacing:3,color:"#FAF7F4",textTransform:"uppercase",fontFamily:"'Cormorant Garamond',serif"}}>{c.heroIngredient}</div>
                     </div>
                     <div style={{marginLeft:"auto",fontFamily:"'Playfair Display',serif",fontStyle:"italic",fontSize:22,color:"rgba(196,168,130,0.4)"}}>#{i+1}</div>
                   </div>
@@ -1326,7 +1326,7 @@ function LandingScreen({ onEnter }) {
           <h1 style={{fontFamily:"'Playfair Display',serif",fontSize:"clamp(40px,10vw,92px)",fontWeight:400,color:"#f5f0eb",letterSpacing:14,textTransform:"uppercase",lineHeight:1,display:"inline"}}>Beauty</h1>
         </div>
         <div style={{marginBottom:32}}>
-          <h1 style={{fontFamily:"'Playfair Display',serif",fontStyle:"italic",fontSize:"clamp(40px,10vw,92px)",fontWeight:400,color:"#c4a882",letterSpacing:10,textTransform:"uppercase",lineHeight:1,display:"inline"}}>Atlas</h1>
+          <h1 style={{fontFamily:"'Playfair Display',serif",fontStyle:"italic",fontSize:"clamp(40px,10vw,92px)",fontWeight:400,color:"#FAF7F4",letterSpacing:10,textTransform:"uppercase",lineHeight:1,display:"inline"}}>Atlas</h1>
         </div>
         <div style={{width:80,height:1,background:"rgba(196,168,130,0.35)",margin:"0 auto 28px"}} />
         <p style={{fontFamily:"'Cormorant Garamond',serif",fontStyle:"italic",fontSize:"clamp(15px,2.5vw,19px)",color:"rgba(245,240,235,0.55)",maxWidth:500,margin:"0 auto 44px",lineHeight:1.8,fontWeight:300}}>
@@ -1334,7 +1334,7 @@ function LandingScreen({ onEnter }) {
         </p>
         <div style={{display:"flex",gap:16,justifyContent:"center",flexWrap:"wrap",marginBottom:52}}>
           <button className="land-btn" onClick={() => onEnter("explore")}
-            style={{padding:"17px 42px",border:"1px solid #c4a882",background:"transparent",color:"#c4a882"}}>
+            style={{padding:"17px 42px",border:"1px solid #FAF7F4",background:"transparent",color:"#FAF7F4"}}>
             Explore by Country
           </button>
           <button className="land-btn" onClick={() => onEnter("concern")}
@@ -1345,7 +1345,7 @@ function LandingScreen({ onEnter }) {
         <div style={{display:"flex",gap:36,justifyContent:"center",flexWrap:"wrap"}}>
           {[["21","Countries"],["4","Categories"],["8","Concerns"],["Deep","Research"]].map(([n,l]) => (
             <div key={l} style={{textAlign:"center"}}>
-              <div style={{fontFamily:"'Playfair Display',serif",fontSize:22,color:"#c4a882",marginBottom:4}}>{n}</div>
+              <div style={{fontFamily:"'Playfair Display',serif",fontSize:22,color:"#FAF7F4",marginBottom:4}}>{n}</div>
               <div style={{fontSize:8,letterSpacing:4,color:"rgba(196,168,130,0.85)",textTransform:"uppercase",fontFamily:"'Cormorant Garamond',serif"}}>{l}</div>
             </div>
           ))}
